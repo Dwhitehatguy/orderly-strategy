@@ -49,11 +49,13 @@ This strategy is ideal for traders looking to enhance their technical setups wit
 ## Tools
 1. EmpyrealSDK
 2. Finbert Sentiment Analysis Model
+3. ALPACA Trade API - for getting news feed
 
 ## Setup
-1. Create environment variables
+1. Create an [ALPACA Account](https://app.alpaca.markets) and get your API keys
+2. Create environment variables
 ```bash
 ALPACA_API_KEY=...
 ALPACA_API_SECRET=...
 ```
-2. **Open ExtendedSmaCross.ipynb and run all cell.**
+3. **Open ExtendedSmaCross.ipynb and run all cell.**
