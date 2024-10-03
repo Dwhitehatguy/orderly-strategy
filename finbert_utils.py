@@ -26,4 +26,3 @@ if __name__ == "__main__":
     tensor, sentiment = estimate_sentiment(['markets responded negatively to the news!','traders were displeased!'])
     print(tensor, sentiment)
     print(torch.cuda.is_available())
-    from emp_orderly_types import PerpetualAssetType
