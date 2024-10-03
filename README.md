@@ -1,7 +1,7 @@
 ### Extended SMA Cross Strategy Overview
 
 #### 1. **Focus**
-The **Extended SMA Cross Strategy** focuses on detecting trend reversals and momentum shifts in the market by using two Simple Moving Averages (SMAs). The strategy exploits the lagging nature of SMAs to enter and exit trades based on the intersection of short-term and long-term trends, aiming to capture significant price movements.
+The **Extended SMA Cross Strategy** combines traditional technical analysis (Simple Moving Average crossovers) with sentiment analysis based on news headlines. The primary goal is to maximize profitability by aligning market trends with prevailing sentiment, adding an extra layer of decision-making based on market sentiment to the standard SMA crossover approach.
 
 ___
 
@@ -19,43 +19,32 @@ In summary, this SMA approach exhibits significant profitability, robust risk mi
 ___
 
 #### 2. **Market Focus**
-This strategy is primarily designed for the **cryptocurrency market**, with a specific focus on **Perpetual Asset Type DOGE (Dogecoin, DOGE/USDC)**. Given its flexibility, the strategy can be adapted to other high-volatility and liquid markets where price trends are clearly defined over short periods.
-
-___
+The strategy is designed for use in **cryptocurrency markets**, specifically targeting the **DOGE/USD pair**. The inclusion of sentiment analysis makes it highly adaptable to other markets that are influenced by news and media, though it’s optimized for volatile assets like Dogecoin.
 
 #### 3. **Time Horizon**
-The strategy is optimized for **short-term trading**, using a **five-minute interval** and a **maximum 14-day trading window**. It is designed to capture market momentum and trend shifts within a short time frame, making it ideal for traders looking to profit from quick market fluctuations.
-
-___
+This is a **short-term trading strategy** intended to run for a maximum of **14 days**, with trades executed based on **five-minute intervals**. It is suitable for day traders and short-term swing traders who aim to capitalize on rapid price changes and market sentiment shifts.
 
 #### 4. **Indicators**
-The strategy employs two key indicators:
-- **10-Day SMA**: A short-term SMA that reacts more quickly to recent price movements.
-- **30-Day SMA**: A longer-term SMA that smooths out price action over a more extended period.
-- **Crossover**: Buy and sell signals are generated when the shorter-term 10-day SMA crosses the longer-term 30-day SMA (Golden Cross) and vice versa (Death Cross).
-
-___
+The strategy employs two key components:
+- **Technical Indicator:**
+  - **SMA Crossover**: Uses a 10-period SMA and a 30-period SMA to detect trend reversals. A crossover of the 10-period SMA above the 30-period SMA generates a buy signal (bullish trend), while the opposite crossover generates a sell signal (bearish trend).
+  
+- **Sentiment Indicator:**
+  - **Sentiment Analysis**: Fetches recent news headlines related to the asset and estimates market sentiment (positive or negative). When sentiment is **highly positive** (probability > 0.999), it signals strong bullish momentum; when **highly negative**, it signals bearish momentum.
 
 #### 5. **Execution**
-The strategy executes as follows:
-- **Buy Signal**: When the 10-day SMA crosses above the 30-day SMA, signaling an upward trend, the strategy closes any existing positions and initiates a buy order with **99.9% of available capital**.
-- **Sell Signal**: When the 10-day SMA crosses below the 30-day SMA, indicating a potential downtrend, the strategy closes any open positions and initiates a sell order.
-- **Position Management**: All positions are closed before a new one is opened to avoid conflicting trades.
-
-___
+The strategy operates as follows:
+- **Buy Signal**: If the 10-period SMA crosses above the 30-period SMA (bullish crossover) or sentiment analysis indicates an extremely positive sentiment with high confidence (probability > 0.999), the strategy initiates a long position.
+- **Sell Signal**: If the 30-period SMA crosses above the 10-period SMA (bearish crossover) or sentiment analysis indicates highly negative sentiment, the strategy initiates a sell or short position.
+- **Position Management**: Any open position is closed before executing a new trade to avoid overlapping positions, and the strategy trades with an order size of **99.9%** of the available capital.
 
 #### 6. **Why It Works**
-The **Extended SMA Cross Strategy** is effective due to:
-- **Clear Trend Signals**: The crossover of two moving averages provides clear signals for entering and exiting trades, helping traders avoid emotional decision-making.
-- **Momentum Capture**: By using both short-term and long-term SMAs, the strategy can capture changes in market momentum, entering trades at the beginning of new trends.
-- **Risk Management**: The strategy’s reliance on SMA crossovers prevents it from making trades during periods of low momentum or noise, leading to more stable and potentially profitable trades in trending markets.
-- **Simplicity**: The simplicity of using SMAs makes the strategy easy to understand, monitor, and implement, while still being highly effective in volatile and liquid markets like cryptocurrency.
+The **Extended SMA Cross Strategy** enhances traditional technical analysis by incorporating real-time sentiment analysis. Here's why this approach can be effective:
+- **Market Sentiment Influence**: Cryptocurrency markets are highly reactive to news, and sentiment analysis allows the strategy to capitalize on this. By filtering news headlines and quantifying sentiment, it ensures that trades are aligned with broader market sentiment.
+- **Dual Confirmation**: By combining **technical signals** (SMA crossover) with **sentiment-based signals**, the strategy seeks to avoid false positives from either indicator, increasing the likelihood of entering trades in the direction of stronger trends.
+- **Volatility Capture**: The integration of fast-moving market sentiment with short-term price movements positions this strategy to perform well in volatile markets like Dogecoin, where both technical trends and news events drive price action.
 
-___
-
-This approach ensures that the strategy systematically takes advantage of momentum shifts in the market, maximizing profitability by entering during trends and exiting during reversals.
-
-___
+This strategy is ideal for traders looking to enhance their technical setups with a sentiment-driven approach, adding robustness to trading decisions in fast-paced markets.
 
 ## Setup
 * **Open ExtendedSmaCross.ipynb and run all cell.**
