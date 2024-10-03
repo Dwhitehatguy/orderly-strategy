@@ -1,4 +1,4 @@
-### Extended SMA Cross Strategy Overview
+# Extended SMA Cross Strategy Overview
 
 #### 1. **Focus**
 The **Extended SMA Cross Strategy** combines traditional technical analysis (Simple Moving Average crossovers) with sentiment analysis based on news headlines. The primary goal is to maximize profitability by aligning market trends with prevailing sentiment, adding an extra layer of decision-making based on market sentiment to the standard SMA crossover approach.
@@ -46,5 +46,14 @@ The **Extended SMA Cross Strategy** enhances traditional technical analysis by i
 
 This strategy is ideal for traders looking to enhance their technical setups with a sentiment-driven approach, adding robustness to trading decisions in fast-paced markets.
 
+## Tools
+1. EmpyrealSDK
+2. Finbert Sentiment Analysis Model
+
 ## Setup
-* **Open ExtendedSmaCross.ipynb and run all cell.**
+1. Create environment variables
+```bash
+ALPACA_API_KEY=...
+ALPACA_API_SECRET=...
+```
+2. **Open ExtendedSmaCross.ipynb and run all cell.**
